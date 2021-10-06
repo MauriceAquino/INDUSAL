@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./Media/Imagen1.png">
+    <link rel="stylesheet" href="./CSS/Diseño.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/zoomove/1.2.1/zoomove.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zoomove/1.2.1/zoomove.min.js"></script>
+    <style>
+        @media (min-width:100px){
+            .zoo-item {
+                max-width: 150px;
+                max-height: 107px;
+            }
+            #mask{
+                background:black;
+                border-radius: 10px;
+            }
+            #mask2{
+                background:-webkit-linear-gradient(left, rgba(240,188,125,1) 0%, rgba(255,146,10,1) 100%);
+                color: white;
+                border-radius: 5px;
+                width: 50px;
+                text-align: center;
+            }
+            #mask p{
+                background: none;
+                font: Marker Felt, fantasy;
+                color: white;
+                font-size: 15px;
+            }
+            #shirt2{
+                background:black;
+                border-radius: 10px;
+            }
+            #Shirt{
+                background:-webkit-linear-gradient(left, rgba(240,188,125,1) 0%, rgba(255,146,10,1) 100%);
+                color: white;
+                border-radius: 5px;
+                width: 50px;
+                text-align: center;
+            }
+            #shirt2 p{
+                background: none;
+                font: Marker Felt, fantasy;
+                color: white;
+                font-size: 15px;
+            }
+            #ban{
+                background:black;
+                border-radius: 10px;
+            }
+            #ban2{
+                background:-webkit-linear-gradient(left, rgba(240,188,125,1) 0%, rgba(255,146,10,1) 100%);
+                color: white;
+                border-radius: 5px;
+                width: 50px;
+                text-align: center;
+            }
+            #ban p{
+                background: none;
+                font: Marker Felt, fantasy;
+                color: white;
+                font-size: 15px;
+            }
+            .Shirt-img {
+                width: 3px;
+                height: 7px;
+                border-radius: 5px;
+            }
+            .ban2-img {
+                width: 10px;
+                border-radius: 5px;
+            }
+            .mask2-img{
+                width: 3px;
+                height: 7px;
+                border-radius: 5px;
+            }
+        }
+        @media (min-width:200px){
+            .zoo-item {
+                max-width: 150px;
+                max-height: 107px;
+            }
+            #mask{
+                background:black;
+                border-radius: 10px;
+            }
+            #mask2{
+                background:-webkit-linear-gradient(left, rgba(240,188,125,1) 0%, rgba(255,146,10,1) 100%);
+                color: white;
+                border-radius: 5px;
+                width: 50px;
+                text-align: center;
+            }
+            #mask p{
+                background: none;
+                font: Marker Felt, fantasy;
+                color: white;
+                font-size: 15px;
+            }
+            #shirt2{
+                background:black;
+                border-radius: 10px;
+            }
+            #Shirt{
+                background:-webkit-linear-gradient(left, rgba(240,188,125,1) 0%, rgba(255,146,10,1) 100%);
+                color: white;
+                border-radius: 5px;
+                width: 50px;
+                text-align: center;
+            }
+            #shirt2 p{
+                background: none;
+                font: Marker Felt, fantasy;
+                color: white;
+                font-size: 15px;
+            }
+            #ban{
+                background:black;
+                border-radius: 10px;
+            }
+            #ban2{
+                background:-webkit-linear-gradient(left, rgba(240,188,125,1) 0%, rgba(255,146,10,1) 100%);
+                color: white;
+                border-radius: 5px;
+                width: 50px;
+                text-align: center;
+            }
+            #ban p{
+                background: none;
+                font: Marker Felt, fantasy;
+                color: white;
+                font-size: 15px;
+            }
+            .Shirt-img {
+                width: 20px;
+                height: 35px;
+                border-radius: 5px;
+            }
+            .ban2-img {
+                width: 70px;
+                border-radius: 5px;
+            }
+            .mask2-img{
+                width: 20px;
+                height: 20px;
+                border-radius: 5px;
+            }
+        }
+        @media (min-width:300px) {
+            .zoo-item {
+                max-width: 175px;
+                max-height: 125px;
+            }
+            #mask{
+                background:black;
+                border-radius: 10px;
+            }
+            #mask2{
+                background:-webkit-linear-gradient(left, rgba(240,188,125,1) 0%, rgba(255,146,10,1) 100%);
+                color: white;
+                border-radius: 5px;
+                width: 100px;
+                text-align: center;
+            }
+            #mask p{
+                background: none;
+                font: Marker Felt, fantasy;
+                color: white;
+                font-size: 15px;
+            }
+            #shirt2{
+                background:black;
+                border-radius: 10px;
+            }
+            #Shirt{
+                background:-webkit-linear-gradient(left, rgba(240,188,125,1) 0%, rgba(255,146,10,1) 100%);
+                color: white;
+                border-radius: 5px;
+                width: 100px;
+                text-align: center;
+            }
+            #shirt2 p{
+                background: none;
+                font: Marker Felt, fantasy;
+                color: white;
+                font-size: 15px;
+            }
+            #ban{
+                background:black;
+                border-radius: 10px;
+            }
+            #ban2{
+                background:-webkit-linear-gradient(left, rgba(240,188,125,1) 0%, rgba(255,146,10,1) 100%);
+                color: white;
+                border-radius: 5px;
+                width: 100px;
+                text-align: center;
+            }
+            #ban p{
+                background: none;
+                font: Marker Felt, fantasy;
+                color: white;
+                font-size: 15px;
+            }
+            .Shirt-img {
+                width: 20px;
+                height: 35px;
+                border-radius: 5px;
+            }
+            .ban2-img {
+                width: 70px;
+                border-radius: 5px;
+            }
+            .mask2-img{
+                width: 20px;
+                height: 20px;
+                border-radius: 5px;
+            }
+        }
+        @media (min-width: 480px) {
+            .zoo-item {
+                max-width: 200px;
+                max-height: 142px;
+            }
+            #mask{
+                background:black;
+                border-radius: 10px;
+            }
+            #mask2{
+                background:-webkit-linear-gradient(left, rgba(240,188,125,1) 0%, rgba(255,146,10,1) 100%);
+                color: white;
+                border-radius: 5px;
+                width: 150px;
+                text-align: center;
+            }
+            #mask p{
+                background: none;
+                font: Marker Felt, fantasy;
+                color: white;
+                font-size: 16px;
+            }
+            #shirt2{
+                background:black;
+                border-radius: 10px;
+            }
+            #Shirt{
+                background:-webkit-linear-gradient(left, rgba(240,188,125,1) 0%, rgba(255,146,10,1) 100%);
+                color: white;
+                border-radius: 5px;
+                width: 150px;
+                text-align: center;
+            }
+            #shirt2 p{
+                background: none;
+                font: Marker Felt, fantasy;
+                color: white;
+                font-size: 16px;
+            }
+            #ban{
+                background:black;
+                border-radius: 10px;
+            }
+            #ban2{
+                background:-webkit-linear-gradient(left, rgba(240,188,125,1) 0%, rgba(255,146,10,1) 100%);
+                color: white;
+                border-radius: 5px;
+                width: 150px;
+                text-align: center;
+            }
+            #ban p{
+                background: none;
+                font: Marker Felt, fantasy;
+                color: white;
+                font-size: 16px;
+            }
+            .Shirt-img {
+                width: 50px;
+                height: 70px;
+                border-radius: 10px;
+            }
+            .ban2-img {
+                width: 130px;
+                border-radius: 10px;
+            }
+            .mask2-img{
+                width: 50px;
+                height: 50px;
+                border-radius: 10px;
+            }
+        }
+        @media (min-width: 700px) {
+            .zoo-item {
+                max-width: 200px;
+                max-height: 142px;
+            }
+            #mask{
+                background:black;
+                border-radius: 10px;
+            }
+            #mask2{
+                background:-webkit-linear-gradient(left, rgba(240,188,125,1) 0%, rgba(255,146,10,1) 100%);
+                color: white;
+                border-radius: 5px;
+                width: 150px;
+                text-align: center;
+            }
+            #mask p{
+                background: none;
+                font: Marker Felt, fantasy;
+                color: white;
+                font-size: 16px;
+            }
+            #shirt2{
+                background:black;
+                border-radius: 10px;
+            }
+            #Shirt{
+                background:-webkit-linear-gradient(left, rgba(240,188,125,1) 0%, rgba(255,146,10,1) 100%);
+                color: white;
+                border-radius: 5px;
+                width: 150px;
+                text-align: center;
+            }
+            #shirt2 p{
+                background: none;
+                font: Marker Felt, fantasy;
+                color: white;
+                font-size: 16px;
+            }
+            #ban{
+                background:black;
+                border-radius: 10px;
+            }
+            #ban2{
+                background:-webkit-linear-gradient(left, rgba(240,188,125,1) 0%, rgba(255,146,10,1) 100%);
+                color: white;
+                border-radius: 5px;
+                width: 150px;
+                text-align: center;
+            }
+            #ban p{
+                background: none;
+                font: Marker Felt, fantasy;
+                color: white;
+                font-size: 16px;
+            }
+            .Shirt-img {
+                width: 90px;
+                height: 120px;
+                border-radius: 10px;
+            }
+            .ban2-img {
+                width: 250px;
+                border-radius: 10px;
+            }
+            .mask2-img{
+                width: 90px;
+                height: 90px;
+                border-radius: 10px;
+            }
+        }
+        @media (min-width: 768px) {
+            .zoo-item {
+                max-width: 275px;
+                max-height: 196px;
+            }
+            #mask{
+                background:black;
+                border-radius: 10px;
+            }
+            #mask2{
+                background:-webkit-linear-gradient(left, rgba(240,188,125,1) 0%, rgba(255,146,10,1) 100%);
+                color: white;
+                border-radius: 5px;
+                width: 200px;
+                text-align: center;
+            }
+            #mask p{
+                background: none;
+                font: Marker Felt, fantasy;
+                color: white;
+                font-size: 18px;
+            }
+            #shirt2{
+                background:black;
+                border-radius: 10px;
+            }
+            #Shirt{
+                background:-webkit-linear-gradient(left, rgba(240,188,125,1) 0%, rgba(255,146,10,1) 100%);
+                color: white;
+                border-radius: 5px;
+                width: 200px;
+                text-align: center;
+            }
+            #shirt2 p{
+                background: none;
+                font: Marker Felt, fantasy;
+                color: white;
+                font-size: 18px;
+            }
+            #ban{
+                background:black;
+                border-radius: 10px;
+            }
+            #ban2{
+                background:-webkit-linear-gradient(left, rgba(240,188,125,1) 0%, rgba(255,146,10,1) 100%);
+                color: white;
+                border-radius: 5px;
+                width: 200px;
+                text-align: center;
+            }
+            #ban p{
+                background: none;
+                font: Marker Felt, fantasy;
+                color: white;
+                font-size: 18px;
+            }
+            .Shirt-img {
+                width: 100px;
+                height: 150px;
+                border-radius: 10px;
+            }
+            .ban2-img {
+                width: 350px;
+                border-radius: 10px;
+            }
+            .mask2-img{
+                width: 100px;
+                height: 100px;
+                border-radius: 10px;
+            }
+        }
+        @media (min-width: 1024px) {
+            .zoo-item {
+                max-width: 300px;
+                max-height: 214px;
+            }
+            #mask{
+                background:black;
+                border-radius: 10px;
+            }
+            #mask2{
+                background:-webkit-linear-gradient(left, rgba(240,188,125,1) 0%, rgba(255,146,10,1) 100%);
+                color: white;
+                border-radius: 5px;
+                width: 250px;
+                text-align: center;
+            }
+            #mask p{
+                background: none;
+                font: Marker Felt, fantasy;
+                color: white;
+                font-size: 20px;
+            }
+            #shirt2{
+                background:black;
+                border-radius: 10px;
+            }
+            #Shirt{
+                background:-webkit-linear-gradient(left, rgba(240,188,125,1) 0%, rgba(255,146,10,1) 100%);
+                color: white;
+                border-radius: 5px;
+                width: 250px;
+                text-align: center;
+            }
+            #shirt2 p{
+                background: none;
+                font: Marker Felt, fantasy;
+                color: white;
+                font-size: 20px;
+            }
+            #ban{
+                background:black;
+                border-radius: 10px;
+            }
+            #ban2{
+                background:-webkit-linear-gradient(left, rgba(240,188,125,1) 0%, rgba(255,146,10,1) 100%);
+                color: white;
+                border-radius: 5px;
+                width: 250px;
+                text-align: center;
+            }
+            #ban p{
+                background: none;
+                font: Marker Felt, fantasy;
+                color: white;
+                font-size: 20px;
+            }
+            .Shirt-img {
+                width: 150px;
+                height: 200px;
+                border-radius: 10px;
+            }
+            .ban2-img {
+                width: 350px;
+                border-radius: 10px;
+            }
+            .mask2-img{
+                width: 150px;
+                height: 150px;
+                border-radius: 10px;
+            }
+        }
+        @media (min-width: 1500px) {
+            .zoo-item {
+                max-width: 350px;
+                max-height: 250px;
+            }
+            #mask{
+                background:black;
+                border-radius: 10px;
+            }
+            #mask2{
+                background:-webkit-linear-gradient(left, rgba(240,188,125,1) 0%, rgba(255,146,10,1) 100%);
+                color: white;
+                border-radius: 5px;
+                width: 30%;
+                text-align: center;
+            }
+            #mask p{
+                background: none;
+                font: Marker Felt, fantasy;
+                color: white;
+                font-size: 20px;
+            }
+            #shirt2{
+                background:black;
+                border-radius: 10px;
+            }
+            #Shirt{
+                background:-webkit-linear-gradient(left, rgba(240,188,125,1) 0%, rgba(255,146,10,1) 100%);
+                color: white;
+                border-radius: 5px;
+                width: 300px;
+                text-align: center;
+            }
+            #shirt2 p{
+                background: none;
+                font: Marker Felt, fantasy;
+                color: white;
+                font-size: 20px;
+            }
+            #ban{
+                background:black;
+                border-radius: 10px;
+            }
+            #ban2{
+                background:-webkit-linear-gradient(left, rgba(240,188,125,1) 0%, rgba(255,146,10,1) 100%);
+                color: white;
+                border-radius: 5px;
+                width: 30%;
+                text-align: center;
+            }
+            #ban p{
+                background: none;
+                font: Marker Felt, fantasy;
+                color: white;
+                font-size: 20px;
+            }
+            .Shirt-img {
+                width: 300px;
+                height: 450px;
+                border-radius: 10px;
+            }
+            .ban2-img {
+                width: 400px;
+                border-radius: 10px;
+            }
+            .mask2-img{
+                width: 300px;
+                height: 300px;
+                border-radius: 10px;
+            }
+        }     
+    </style>
+    <title>Servicios - INDUSAL</title>
+</head>
+<body>
+    <header>
+        <hr color="#ad55c1" width="600">
+        <div class="header"></div>
+        <hr color="#ad55c1" width="600">
+    </header>
+    <nav class="menu">
+        <ol>
+            <li class="menu-item"><a href="./Index.html">Inicio</a></li>
+            <li class="menu-item"><a href="./Nosotros - INDUSAL.html">Nosotros</a></li>
+            <li class="menu-item"><a href="./Servicios.html">Servicios</a></li>
+            <li class="menu-item"><a href="./Contactos.html">Contactos</a></li>
+          </ol>
+    </nav>
+    <section>
+        <article>
+            <p>
+               En INDUSAL ofrecemos variedad de piezas de confección a un precio al alcance del bolsillo de los salvadoreños, aquí algunas de nuestras prendas con sus respectivos precios.
+                <i>(hacer click para ver cada una de nuestras prendas)</i>
+            </p>
+            <div id="ban2">Testimonios de compra.</div>
+            <div id="ban">
+                <p class="ban2" style="display: none;">Nada mejor que contar uno de nuestros testimonios de compra mas grandes, este año tuvimos el placer de trabajar con un laboratorio importante de nuestro país, fue un gusto ofrecer nuestro servicio y darnos cuenta de que somos personas que trabajan con excelencia, personas en quien puede confiar cualquiera de sus diseños, como lo he dicho y lo vuelvo a decir una vez mas, será un placer brindar nuestros servicios </p>
+                <p class="ban2" style="display: none;"></p>
+                <table align="center" class="ban2" style="display: none;">
+                    <tr>
+                        <td>
+                            <img style="display: none;" class="ban2-img" src="./Media/mascarilla3.jpeg">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <br>
+            <div id="mask2">Mascarillas</div>
+            <div id="mask">
+                <p class="mask2" style="display: none;">Contamos con una amplia variedad en mascarillas, entre ellas tenemos las siguientes:</p>
+                <table align="center" class="mask2" style="display: none;">
+                    <tr>
+                        <td>
+                            <img style="display: none;" class="mask2-img" src="./Media/mascarilla2.jpeg">
+                        </td>
+                        <td>
+                            <img style="display: none;" class="mask2-img" src="./Media/mascarilla1.jpeg">
+                        </td>
+                        <td>
+                            <img style="display: none;" class="mask2-img" src="./Media/mascarilla3.jpeg">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <br>
+
+
+
+            <div id="Shirt">Camisas</div>
+            <div id="shirt2">
+                <p style="display: none;" class="Shirt">Entre la variedad de camisas tenemos las siguientes:
+                Camisas de vestir, camisas de uniforme de fútbol, camisas tipo polo.</p>
+                <table class="Shirt" style="display: none;" align="center">
+                    <tr>
+                        <td>
+                            <img style="display: none;" class="Shirt-img" src="./Media/camisa2.jpeg">
+                        </td>
+                        <td>
+                            <img style="display: none;" class="Shirt-img" src="./Media/camisa1.jpeg">
+                        </td>
+                        <td>
+                            <img style="display: none;" class="Shirt-img" src="./Media/camisa3.jpeg">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img style="display: none;" class="Shirt-img" src="./Media/camisa5.jpeg">
+                        </td>
+                        <td>
+                            <img style="display: none;" class="Shirt-img" src="./Media/camisa6.jpeg">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <script type="text/javascript">
+                $(document).ready(function(){
+                $("#mask2").click(function(){
+                $("#mask").slideToggle(3000);
+                $(".mask2").fadeIn(6000);
+                $(".mask2-img").fadeIn(6000);
+                });
+                $("#Shirt").click(function(){
+                $("#shirt2").slideToggle(3000);
+                $(".Shirt").fadeIn(6000);
+                $(".Shirt-img").fadeIn(6000);
+                });
+                $("#ban2").click(function(){
+                    $("#ban").slideToggle(3000);
+                    $(".ban2").fadeIn(6000);
+                    $(".ban2-img").fadeIn(6000);
+                    });
+                });
+            </script>
+        </article>
+    </section>
+    <aside>
+        <blockquote>
+            <div
+                    class="zoo-item"
+                    data-zoo-image="./Media/3.jpg"
+                    data-zoo-scale="1.1"
+                    data-zoo-move="false"
+                    data-zoo-over="true"
+                    data-zoo-cursor="false"
+                    data-zoo-autosize="auto"
+                    style="background-position: left;">
+            </div>
+        </blockquote>
+        <div class="spaced"></div>
+        <blockquote>
+            <div
+                    class="zoo-item"
+                    data-zoo-image="./Media/4.jpg"
+                    data-zoo-scale="1.1"
+                    data-zoo-move="false"
+                    data-zoo-over="true"
+                    data-zoo-cursor="false"
+                    data-zoo-autosize="auto"
+                    style="background-position: center;">
+        </div>
+        </blockquote>
+        <div class="spaced"></div>
+        <blockquote>
+            <div
+                    class="zoo-item"
+                    data-zoo-image="./Media/9.jpg"
+                    data-zoo-scale="1.1"
+                    data-zoo-move="false"
+                    data-zoo-over="true"
+                    data-zoo-cursor="false"
+                    data-zoo-autosize="auto"
+                    style="background-position: center;">
+        </div>
+        </blockquote>
+        <div class="spaced"></div>
+        <blockquote>
+            <div
+                    class="zoo-item"
+                    data-zoo-image="./Media/8.jpg"
+                    data-zoo-scale="1.1"
+                    data-zoo-move="false"
+                    data-zoo-over="true"
+                    data-zoo-cursor="false"
+                    data-zoo-autosize="auto"
+                    style="background-position: center;">
+        </div>
+        </blockquote>
+        <script>
+            $('.zoo-item').ZooMove({   
+            cursor:'false',
+            scale:'1.1',
+            move:'false',
+            over:'true',
+            autosize:'true'
+            });
+        </script>
+    </aside>
+    <footer>
+
+    </footer>
+</body>
+</html>
